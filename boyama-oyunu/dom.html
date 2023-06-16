@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Denemesi</title>
+  </head>
+  <body>
+    <a id="test" class="text" href="#" target="_blank">Link</a>
+    <span id="detail">Detay</span>
+    <p class="text" style="color: red;">Paragraf</p>
+    <button id="btn">Buton</button>
+    <script>
+      // console.log(document.getElementsByClassName("text").length);
+      
+      console.log(document.getElementsByTagName("span")[0].innerText);
+      document.writeln("Deneme yazı");
+      document.writeln("Deneme yazı");
+      document.title = "Deneme";
+      // document.body.appendChild(elementP); // elementP sahneye ekledik.
+      let theButton = document.getElementById("btn");
+      theButton.addEventListener("click", function () {
+       let thePar = document.querySelector("p.text");
+       thePar.style.color = "orange";
+       thePar.style.backgroundColor = "black";
+
+        // let theSpan = document.getElementsByTagName("span")[0];
+        // console.log(theSpan.parentNode.removeChild(thePar));
+        // let elementP = document.createElement("p"); // şu anda havada asılı kaldı. sadece tanımlandı.
+        // elementP.innerText = "Kodla eklenen bir paragraf";
+        // theSpan.appendChild(elementP);
+      });
+      console.log(document.querySelector("#btn"));
+    </script>
+  </body>
+</html>
